@@ -1,3 +1,3 @@
 # blog-api
-##Blogdb architecture
+## Blogdb architecture
 ![blogdb architecture](design/BlogDB.png)
