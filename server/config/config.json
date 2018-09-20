@@ -1,12 +1,13 @@
 {
-  "test": {
-    "PORT": 3000,
-    "MONGODB_URI": "mongodb://akashojha:xyz123@localhost:27017/BlogApp",
-    "JWT_SECRET": "abcdefg"
-  },
-  "development": {
-    "PORT": 3000,
-    "MONGODB_URI": "mongodb://akashojha:xyz123@localhost:27017/BlogApp",
-    "JWT_SECRET": "abcdefg"
-  }
+    "test": {
+        "PORT": 8000,
+        "MONGODB_URI": "mongodb://35.171.8.11/TodoApp",
+        "JWT_SECRET": "poijasdf98435jpgfdpoij3"
+    },
+    "development": {
+        "PORT": 8000,
+        "MONGODB_URI":
+            "mongodb://akashV2:fhkdghjf345hhffh4jfjfjfgjHFGHFNB@35.171.8.11/TodoApp",
+        "JWT_SECRET": "pojiaj234oi234oij234oij4"
+    }
 }

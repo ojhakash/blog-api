@@ -21,6 +21,10 @@ let BlogSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     required: "creator field can't be empty",
     ref: "User"
+  },
+  approved:{
+    type:Boolean,
+    default:false
   }
 });
 
@@ -29,6 +33,25 @@ BlogSchema.methods.toJSON = function() {
   let BlogObject = Blog.toObject();
   return _.pick(BlogObject, ["_id", "title", "description", "creator"]);
 };
+
+BlogSchema.statics.findByCreator = function(id){
+  let Blog = this;
+  let blogs = Blog.find({creator:id});
+  return blogs;
+}
+
+BlogSchema.statics.findAllBlogs = function () {
+  let Blog = this;
+  let blogs = Blog.find({});
+  return blogs;
+}
+
+BlogSchema.statics.findById = function (id) {
+  let Blog = this;
+  let blog = Blog.findOne({_id:id});
+
+  return blog;
+}
 
 let Blog = mongoose.model("Blog", BlogSchema);
 
